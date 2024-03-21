@@ -1,7 +1,14 @@
+import React from "react";
 import Botao from "../Atomos/Button";
 import Span from "../Atomos/Span";
 
-const MoleculasHeader = (props) => {
+interface IMoleculaHeaderProps {
+    onVoltar: () => void;
+    texto: string;
+    onSeguir: () => void;
+}
+
+const MoleculasHeader: React.FC<IMoleculaHeaderProps> = (props) => {
     return (
         <div>
             <Botao onAcaoDoClick={props.onVoltar}>≤</Botao>
