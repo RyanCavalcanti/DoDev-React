@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Botao from './Botao';
+import Calculadora from './Calculadora';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           >
             Learn React
           </a>
+          <Calculadora/>
         </header>
       </div>
     </>
