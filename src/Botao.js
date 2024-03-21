@@ -1,26 +1,30 @@
-import { useState } from "react"
+// import { useState } from "react"
+// import useLog from "./hooks/useLog";
 
-const Botao = () => {
-    const [soma, setSoma] = useState(0);
-    const [frase, setFrase] = useState('Meu nome é: ');
+const Botao = (props) => {
+    // const [soma, setSoma] = useState(0);
+    // const [frase, setFrase] = useState('Meu nome é: ');
 
-    console.log('soma', soma)
-    console.log('Frase', frase)
+    // const assinado = useLog(soma)
 
-    const handle = () => {
-        setSoma(soma + 1);
-    }
+    // console.log("app", assinado)
 
-    const handleFrase = () => {
-        setFrase(frase + " Ryan");
-    }
+    // console.log('soma', soma)
+    // console.log('Frase', frase)
+
+    // const handle = () => {
+    //     setSoma(soma + 1);
+    // }
+
+    // const handleFrase = () => {
+    //     setFrase(frase + " Ryan");
+    // }
     return (
         <>
-            <button onClick={handle}>Soma</button>
-            <h1>.</h1>
-            <button onClick={handleFrase}>Muda Frase</button>
+            <button onClick={() => props.onAcaoDoClick(props.mensagemNoClick)}>{props.children}</button>
+            {/* <button onClick={handleFrase}>Muda Frase</button> */}
         </>
     )
 }
 
-export default Botao
+export default Botao;

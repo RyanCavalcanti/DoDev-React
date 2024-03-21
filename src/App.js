@@ -1,28 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
 import Botao from './Botao';
-import Calculadora from './Calculadora';
+import Secao from './Secao';
+// import { useState } from 'react';
+// import useLog from './hooks/useLog';
+
 
 function App() {
+  // const [nome, setNome] = useState('Ryan')
+  // const assinado = useLog(nome)
+
+  // console.log("app", assinado)
+
+  const handleClick = (valor) => {
+    alert(valor)
+  }
+
+  const handleClickTipoDois = (valor) => {
+    alert(valor + '... Att, Rocha')
+  }
 
   return (
     <>
       <div className="App">
         <header className="App-header">
-        <Botao/>
+          <Secao/>
+          <Botao />
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <Calculadora/>
+          {/* <button onClick={() => setNome('Ryan Cavalcanti')}>Sobrenome</button> */}
+          <Botao onAcaoDoClick={handleClick} mensagemNoClick="1">Btn 1</Botao>
+          <Botao onAcaoDoClick={handleClickTipoDois} mensagemNoClick="2">Btn 2</Botao>
+          <Botao onAcaoDoClick={handleClick} mensagemNoClick="3">Btn 3</Botao>
+          <Botao onAcaoDoClick={handleClickTipoDois} mensagemNoClick="4">Btn 4</Botao>
+
         </header>
       </div>
     </>
